@@ -1,0 +1,237 @@
+    <div class="footer">
+        <div class="con">
+            <a href="#"><img src="images/bottom_logo.png" width="210" height="48" class="fl logo"/></a>
+            <div class="fr contract">
+                <p>版权所有 &nbsp;安徽师范大学皖江学院 &nbsp;&nbsp;联系电话：0553-5772122 &nbsp;&nbsp;传真：0553-5772122</p>
+                <p>Copyright ? All Rights Reserved &nbsp;&nbsp;访问量：949395</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">
+	// png图片兼容性
+    DD_belatedPNG.fix('.needpng,.png');
+    DD_belatedPNG.fix('body,background,img');
+	// 点击div外的地方div窗口隐藏消失
+    $(document).on("click",function(e){
+        var target = $(e.target);
+        if(target.closest(".first-banner,.two-banner").length == 0 && target.closest(".banner li,").length == 0){
+            $(".first-banner,.two-banner").hide();
+        }
+    })
+    $(function(){
+	    //导航 
+        $(".banner li").hover(function(){
+            var index=$(this).index();
+            $(".first-banner").eq(index).show();
+            $(".first-banner").eq(index).siblings(".first-banner").hide();
+            $(".two-banner").eq(index).show();
+            $(".two-banner").eq(index).siblings(".two-banner").hide();
+        })
+		//列表页侧边栏
+		var html="",html01="",html02="",html03="",html04="",html05="",html06="",html07="",html08="",html09="";
+        html01+='<div class="title">';
+        html01+='    <p>系情总览</p>';
+        html01+='    <p class="english">SYSTEMS OVERVIEW</p>';
+        html01+='</div>';
+        html01+='<ul class="side-ul">';
+        html01+='    <li data-url="7226"><a href="7226">系况简介</a></li>';
+        html01+='    <li data-url="7227"><a href="7227">机构人员</a></li>';
+        html01+='    <li data-url="7228"><a href="7228">岗位职责</a></li>';
+        html01+='    <li data-url="7229"><a href="7229">教师风采</a></li>';
+        html01+='</ul>';
+
+        html02+='<div class="title">';
+        html02+='    <p>教学工作</p>';
+        html02+='    <p class="english">TEACHING</p>';
+        html02+='</div>';
+        html02+='<ul class="side-ul">';
+        html02+='    <li data-url="7230"><a href="7230">工作通知</a></li>';
+        html02+='    <li data-url="7231"><a href="7231">管理制度</a></li>';
+        html02+='    <li data-url="7232"><a href="7232">教学活动</a></li>';
+        html02+='</ul>';
+
+        html03+='<div class="title">';
+        html03+='    <p>专业建设</p>';
+        html03+='    <p class="english">PROFESSIONAL CONSTRUCTION</p>';
+        html03+='</div>';
+        html03+='<ul class="side-ul">';
+        html03+='    <li data-url="7233"><a href="7233">特色专业</a></li>';
+        html03+='    <li data-url="7234"><a href="7234">核心课程</a></li>';
+        html03+='    <li data-url="7235"><a href="7235">实践教学</a></li>';
+        html03+='</ul>';
+
+        html04+='<div class="title">';
+        html04+='    <p>党团建设</p>';
+        html04+='    <p class="english">PARTY CONSTRUCTION</p>';
+        html04+='</div>';
+        html04+='<ul class="side-ul">';
+        html04+='    <li data-url="7236"><a href="7236">党团组织</a></li>';
+        html04+='    <li data-url="7237"><a href="7237">工作动态</a></li>';
+        html04+='    <li data-url="7238"><a href="7238">文件制度</a></li>';
+        html04+='</ul>';
+
+        html05+='<div class="title">';
+        html05+='    <p>学生园地</p>';
+        html05+='    <p class="english">STUDENTS</p>';
+        html05+='</div>';
+        html05+='<ul class="side-ul">';
+        html05+='    <li data-url="7239"><a href="7239">学生组织</a></li>';
+        html05+='    <li data-url="7240"><a href="7240">第二课堂</a></li>';
+        html05+='    <li data-url="7241"><a href="7241">考证考级</a></li>';
+        html05+='    <li data-url="7242"><a href="7242">考研信息</a></li>';
+        html05+='    <li data-url="7243"><a href="7243">系刊《新晨》</a></li>';
+        html05+='</ul>';
+
+        html06+='<div class="title">';
+        html06+='    <p>学子风采</p>';
+        html06+='    <p class="english">STUDENTS STYLE</p>';
+        html06+='</div>';
+        html06+='<ul class="side-ul">';
+        html06+='    <li data-url="7244"><a href="7244">学生风采</a></li>';
+        html06+='    <li data-url="7245"><a href="7245">作品展示</a></li>';
+        html06+='    <li data-url="7246"><a href="7246">系友风采</a></li>';
+        html06+='</ul>';
+
+        html07+='<div class="title">';
+        html07+='    <p>招生就业</p>';
+        html07+='    <p class="english">ENROLLMENT EMPLOYMENT</p>';
+        html07+='</div>';
+        html07+='<ul class="side-ul">';
+        html07+='    <li data-url="7247"><a href="7247">招生政策</a></li>';
+        html07+='    <li data-url="7248"><a href="7248">就业信息</a></li>';
+        html07+='</ul>';
+		
+		html08+='<div class="title">';
+        html08+='    <p>下载专区</p>';
+        html08+='    <p class="english">DOWNLOAD</p>';
+        html08+='</div>';
+		
+		html09+='<div class="title">';
+        html09+='    <p>首页</p>';
+        html09+='    <p class="english">HOME</p>';
+        html09+='</div>';
+        html09+='<ul class="side-ul">';
+        html09+='    <li data-url="7176"><a href="7176">通知公告</a></li>';
+        html09+='    <li data-url="7177"><a href="7177">新闻动态</a></li>';
+		html09+='    <li data-url="7178"><a href="7178">教学工作</a></li>';
+        html09+='    <li data-url="7179"><a href="7179">学子风采</a></li>';
+		html09+='    <li data-url="7180"><a href="7180">学生园地</a></li>';
+        html09+='</ul>';
+		
+        var url_id=$("#left-side").data("url");
+        if(url_id==7226||url_id==7227||url_id==7228||url_id==7229){
+            html=html01;
+			$(".first-tip").text("系情总览");
+        }else if(url_id==7230||url_id==7231||url_id==7232){
+            html=html02;
+			$(".first-tip").text("教学工作");
+        }else if(url_id==7233||url_id==7234||url_id==7235){
+            html=html03;
+			$(".first-tip").text("专业建设");
+        }else if(url_id==7236||url_id==7237||url_id==7238){
+            html=html04;
+			$(".first-tip").text("党团建设");
+        }else if(url_id==7239||url_id==7240||url_id==7241||url_id==7242||url_id==7243){
+            html=html05;
+			$(".first-tip").text("学生园地");
+        }else if(url_id==7244||url_id==7245||url_id==7246){
+            html=html06;
+			$(".first-tip").text("学子风采");
+        }else if(url_id==7247||url_id==7248){
+            html=html07;
+			$(".first-tip").text("招生就业");
+        }else if(url_id==7225){
+            html=html08;
+			$(".first-tip").text("下载专区");
+			$(".second-tip").hide();
+        }else if(url_id==7176||url_id==7177||url_id==7178||url_id==7179||url_id==7180){
+            html=html09;
+			$(".first-tip").text("首页");
+        }
+        $("#left-side").html(html);
+		$("#left-side .side-ul li").each(function(){
+            if($(this).data("url")==url_id){
+                $(this).addClass("hover");
+            }
+        })
+		
+    })
+	//头部日期
+	var time = new Date(); 
+	var year = time.getFullYear(); 
+	var month = time.getMonth() + 1; 
+	var date = time.getDate(); 
+	var day = time.getDay(); 
+	var week ;
+	switch (day)
+	{
+		case 0:
+		  week = "星期日";
+		  break;  
+		case 1:
+		  week = "星期一";
+		  break;  
+		case 2:
+		  week = "星期二";
+		  break;  
+		case 3:
+		  week = "星期三";
+		  break;  
+		case 4:
+		  week = "星期四";
+		  break;  
+		case 5:
+		  week = "星期五";
+		  break;  
+		case 6:
+		  week = "星期六";
+		  break;  
+	}
+	var now_time = year + '年' + (month < 10 ? "0" + month : month) + '月' + date + '日' + ' '+ week ; 
+	document.getElementById('show-date').innerHTML = now_time;
+	
+	//加入收藏
+	function AddFavorite(URL, Title){
+	   try{
+		   window.external.addFavorite(URL, Title);
+	   } catch (e) {
+		   try {
+			   window.sidebar.addPanel(Title, URL, "");
+		   } catch (e) {
+			   alert("加入收藏失败，请使用Ctrl+D进行添加");
+		   }
+	   }
+	}
+    
+    // 首页轮播
+    var t = n =0, count;
+    $(document).ready(function(){
+        count=$("#banner_list a").length;
+        $("#banner_list a:not(:first-child)").hide();
+        $("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
+        $("#banner_info").click(function(){window.open($("#banner_list a:first-child").attr('href'), "_blank")});
+        $("#banner li").click(function() {
+            var i = $(this).text() -1;//获取Li元素内的值，即1，2，3，4
+            n = i;
+            if (i >= count) return;
+            $("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
+            $("#banner_info").unbind().click(function(){
+                window.open($("#banner_list a").eq(i).attr('href'), "_blank")
+            })
+            $("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(500);
+            document.getElementById("banner").style.background="";
+            $(this).toggleClass("on");
+            $(this).siblings().removeAttr("class");
+        });
+        t = setInterval("showAuto()", 3000);
+        $("#banner").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 3000);});
+    })
+    function showAuto(){
+        n = n >=(count -1) ?0 : ++n;
+        $("#banner li").eq(n).trigger('click');
+    }
+    </script>
+  </body>
+</html>
